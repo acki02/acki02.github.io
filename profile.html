@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="./styles/profile.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>User Profile for <span id="loginName"></span></h1>
+    <button id="logOutBtn">Log Out</button>
+  </div>
+
+  <div id="logOutModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Are you sure you want to log out?</p>
+      <button id="logOutConfirm">Log Out</button>
+    </div>
+
+  </div>
+  <div class="main">
+    <div class="user-info">
+      <h3>Info about student</h3>
+      <hr>
+      <div class="nameContainer">
+
+      </div>
+      <h3>School Curriculum XP</h3>
+      <hr>
+      <div class="xpContainer">
+
+      </div>
+      <h3>Audits done and received</h3>
+      <hr>
+      <div class="auditContainer">
+        <span id ="auditDone"></span>
+        <br>
+        <span id ="auditReceived"></span>
+      </div>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>Audit Ratio</h2>
+      <hr>
+      <div id="legend">
+        <div class="legend-item">
+          <span class="legend-color" style="background-color: #FF7043;"></span>
+          <span class="legend-label">Audits Done XP</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color" style="background-color: #1FDA9A;"></span>
+          <span class="legend-label">Audits Received XP</span>
+        </div>
+      </div>
+      <div id="chart"></div>
+<div id="mainTooltip" class="hidden">
+	<p><span id="value"></span></p>
+</div>
+<br>
+<br>
+<br>
+
+<h2>Attempts for completed Piscine JS exercises</h2>
+      <hr>
+      <div id="barChartOuterContainer">
+        <div id="barChartContainer">
+          <svg id="barChart" width="9000" height="400"></svg>
+        </div>
+      </div>
+
+
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js" defer></script>
+  <script src="./scripts/fetch.js" defer></script>
+  <script src="./scripts/graphMaker.js" defer></script>
+  <script src="./scripts/profile.js" defer></script>
+
+</body>
+
+</html>
